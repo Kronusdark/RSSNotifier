@@ -14,7 +14,8 @@
 		7C5840691668D92B00B83E08 /* NAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5840681668D92B00B83E08 /* NAppDelegate.m */; };
 		7C58406C1668D92C00B83E08 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C58406A1668D92C00B83E08 /* MainMenu.xib */; };
 		7C5840761668D95E00B83E08 /* RSSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5840751668D95E00B83E08 /* RSSKit.framework */; };
-		7C5841161669314100B83E08 /* NPrefsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5841151669314100B83E08 /* NPrefsViewController.m */; };
+		7C58412016693BAC00B83E08 /* NRSSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C58411F16693BAC00B83E08 /* NRSSManager.m */; };
+		7C58412516693BE900B83E08 /* NPrefWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C58412416693BE900B83E08 /* NPrefWindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +33,10 @@
 		7C5840681668D92B00B83E08 /* NAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAppDelegate.m; sourceTree = "<group>"; };
 		7C58406B1668D92C00B83E08 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7C5840751668D95E00B83E08 /* RSSKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RSSKit.framework; path = ../RSSKit/build/Release/RSSKit.framework; sourceTree = "<group>"; };
-		7C5841141669314100B83E08 /* NPrefsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPrefsViewController.h; path = Views/NPrefsViewController.h; sourceTree = "<group>"; };
-		7C5841151669314100B83E08 /* NPrefsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPrefsViewController.m; path = Views/NPrefsViewController.m; sourceTree = "<group>"; };
+		7C58411E16693BAC00B83E08 /* NRSSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRSSManager.h; path = Model/NRSSManager.h; sourceTree = "<group>"; };
+		7C58411F16693BAC00B83E08 /* NRSSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRSSManager.m; path = Model/NRSSManager.m; sourceTree = "<group>"; };
+		7C58412316693BE900B83E08 /* NPrefWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPrefWindowController.h; path = Controllers/NPrefWindowController.h; sourceTree = "<group>"; };
+		7C58412416693BE900B83E08 /* NPrefWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPrefWindowController.m; path = Controllers/NPrefWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +92,11 @@
 		7C58405B1668D92B00B83E08 /* RSSNotifier */ = {
 			isa = PBXGroup;
 			children = (
-				7C5841181669314700B83E08 /* View Controllers */,
+				7C58412616693BEE00B83E08 /* Controller */,
+				7C58412216693BC100B83E08 /* View */,
+				7C58412116693BB300B83E08 /* Model */,
 				7C5840671668D92B00B83E08 /* NAppDelegate.h */,
 				7C5840681668D92B00B83E08 /* NAppDelegate.m */,
-				7C58406A1668D92C00B83E08 /* MainMenu.xib */,
 				7C58405C1668D92B00B83E08 /* Supporting Files */,
 			);
 			path = RSSNotifier;
@@ -110,13 +114,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7C5841181669314700B83E08 /* View Controllers */ = {
+		7C58412116693BB300B83E08 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7C5841141669314100B83E08 /* NPrefsViewController.h */,
-				7C5841151669314100B83E08 /* NPrefsViewController.m */,
+				7C58411E16693BAC00B83E08 /* NRSSManager.h */,
+				7C58411F16693BAC00B83E08 /* NRSSManager.m */,
 			);
-			name = "View Controllers";
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7C58412216693BC100B83E08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C58406A1668D92C00B83E08 /* MainMenu.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7C58412616693BEE00B83E08 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7C58412316693BE900B83E08 /* NPrefWindowController.h */,
+				7C58412416693BE900B83E08 /* NPrefWindowController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +207,8 @@
 			files = (
 				7C5840621668D92B00B83E08 /* main.m in Sources */,
 				7C5840691668D92B00B83E08 /* NAppDelegate.m in Sources */,
-				7C5841161669314100B83E08 /* NPrefsViewController.m in Sources */,
+				7C58412016693BAC00B83E08 /* NRSSManager.m in Sources */,
+				7C58412516693BE900B83E08 /* NPrefWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
