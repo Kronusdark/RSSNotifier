@@ -13,6 +13,7 @@
 		7C5840661668D92B00B83E08 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5840641668D92B00B83E08 /* Credits.rtf */; };
 		7C5840691668D92B00B83E08 /* NAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5840681668D92B00B83E08 /* NAppDelegate.m */; };
 		7C58406C1668D92C00B83E08 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C58406A1668D92C00B83E08 /* MainMenu.xib */; };
+		7C5840761668D95E00B83E08 /* RSSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5840751668D95E00B83E08 /* RSSKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		7C5840671668D92B00B83E08 /* NAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAppDelegate.h; sourceTree = "<group>"; };
 		7C5840681668D92B00B83E08 /* NAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAppDelegate.m; sourceTree = "<group>"; };
 		7C58406B1668D92C00B83E08 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7C5840751668D95E00B83E08 /* RSSKit.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = RSSKit.framework; path = ../RSSKit/build/Release/RSSKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5840761668D95E00B83E08 /* RSSKit.framework in Frameworks */,
 				7C5840561668D92B00B83E08 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +66,7 @@
 		7C5840541668D92B00B83E08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C5840751668D95E00B83E08 /* RSSKit.framework */,
 				7C5840551668D92B00B83E08 /* Cocoa.framework */,
 				7C5840571668D92B00B83E08 /* Other Frameworks */,
 			);
