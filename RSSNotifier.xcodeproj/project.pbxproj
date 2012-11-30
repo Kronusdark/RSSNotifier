@@ -16,6 +16,7 @@
 		7C5840761668D95E00B83E08 /* RSSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5840751668D95E00B83E08 /* RSSKit.framework */; };
 		7C58412016693BAC00B83E08 /* NRSSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C58411F16693BAC00B83E08 /* NRSSManager.m */; };
 		7C58412516693BE900B83E08 /* NPrefWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C58412416693BE900B83E08 /* NPrefWindowController.m */; };
+		7CAE888E16693DCF00F9E8D1 /* NDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAE888D16693DCF00F9E8D1 /* NDataStorage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		7C58411F16693BAC00B83E08 /* NRSSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRSSManager.m; path = Model/NRSSManager.m; sourceTree = "<group>"; };
 		7C58412316693BE900B83E08 /* NPrefWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPrefWindowController.h; path = Controllers/NPrefWindowController.h; sourceTree = "<group>"; };
 		7C58412416693BE900B83E08 /* NPrefWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPrefWindowController.m; path = Controllers/NPrefWindowController.m; sourceTree = "<group>"; };
+		7CAE888C16693DCF00F9E8D1 /* NDataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDataStorage.h; path = Model/NDataStorage.h; sourceTree = "<group>"; };
+		7CAE888D16693DCF00F9E8D1 /* NDataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDataStorage.m; path = Model/NDataStorage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 			children = (
 				7C58411E16693BAC00B83E08 /* NRSSManager.h */,
 				7C58411F16693BAC00B83E08 /* NRSSManager.m */,
+				7CAE888C16693DCF00F9E8D1 /* NDataStorage.h */,
+				7CAE888D16693DCF00F9E8D1 /* NDataStorage.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 				7C5840691668D92B00B83E08 /* NAppDelegate.m in Sources */,
 				7C58412016693BAC00B83E08 /* NRSSManager.m in Sources */,
 				7C58412516693BE900B83E08 /* NPrefWindowController.m in Sources */,
+				7CAE888E16693DCF00F9E8D1 /* NDataStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
