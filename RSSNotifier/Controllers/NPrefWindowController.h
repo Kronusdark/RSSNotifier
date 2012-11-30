@@ -10,4 +10,15 @@
 
 @interface NPrefWindowController : NSWindowController <NSTableViewDataSource, NSTableViewDelegate>
 
+// Actions
+- (IBAction)stepperValueChanged:(id)sender;
+- (IBAction)buttonAdd:(id)sender;
+- (IBAction)buttonRemove:(id)sender;
+
+// Outlets
+@property (weak) IBOutlet NSButton *buttonRemove;
+@property (weak) IBOutlet NSButton *buttonAdd;
+@property (weak) IBOutlet NSTextField *textTitle;
+@property (weak) IBOutlet NSTextField *textFeed;
+
 @end
