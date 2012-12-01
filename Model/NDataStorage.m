@@ -12,27 +12,27 @@
 
 + (NSArray *)getFeeds {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSData *data = [userDefaults objectForKey:@"feeds"];
+    NSData *data = [userDefaults objectForKey:kNKeyFeeds];
     return [NSKeyedUnarchiver unarchiveObjectWithData:data];
 }
 
 + (void)setFeeds:(NSArray *)feeds {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:feeds];
-    [userDefaults setObject:data forKey:@"feeds"];
+    [userDefaults setObject:data forKey:kNKeyFeeds];
     [userDefaults synchronize];
 }
 
 + (NSDictionary *)getSettings {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSData *data = [userDefaults objectForKey:@"settings"];
+    NSData *data = [userDefaults objectForKey:kNKeySettings];
     return [NSKeyedUnarchiver unarchiveObjectWithData:data];
 }
 
 + (void)setSettings:(NSDictionary *)settings {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:settings];
-    [userDefaults setObject:data forKey:@"settings"];
+    [userDefaults setObject:data forKey:kNKeySettings];
     [userDefaults synchronize];}
 
 @end

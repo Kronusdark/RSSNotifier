@@ -44,10 +44,10 @@
 
 - (void)loadSettings {
     NSMutableDictionary *settings = [[NDataStorage getSettings] mutableCopy];
-    self.textRefreshInterval.integerValue = [[settings valueForKey:@"refreshInterval"] integerValue];
-    if (![settings valueForKey:@"refreshInterval"]) {
+    self.textRefreshInterval.integerValue = [[settings valueForKey:kNKeyRefreshInterval] integerValue];
+    if (![settings valueForKey:kNKeyRefreshInterval]) {
         self.textRefreshInterval.integerValue = 10;
-        [settings setValue:@10 forKey:@"refreshInterval"];
+        [settings setValue:@10 forKey:kNKeyRefreshInterval];
     }
     [NDataStorage setSettings:settings];
 }
@@ -57,7 +57,7 @@
     
     // Settings
     
-    [settings setValue:[NSNumber numberWithInteger:self.textRefreshInterval.integerValue] forKey:@"refreshInterval"];
+    [settings setValue:[NSNumber numberWithInteger:self.textRefreshInterval.integerValue] forKey:kNKeyRefreshInterval];
     
     [NDataStorage setSettings:settings];
 }

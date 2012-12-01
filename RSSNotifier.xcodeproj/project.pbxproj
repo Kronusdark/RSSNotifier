@@ -42,6 +42,7 @@
 		AD6E0A521669A4E5008D6A29 /* NRSSManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NRSSManager.h; path = Model/NRSSManager.h; sourceTree = SOURCE_ROOT; };
 		AD6E0A531669A4E5008D6A29 /* NRSSManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NRSSManager.m; path = Model/NRSSManager.m; sourceTree = SOURCE_ROOT; };
 		AD6E0A5F1669B7F9008D6A29 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		AD6E0A71166A5989008D6A29 /* NDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDefs.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +152,7 @@
 		AD6E0A5E1669B7F9008D6A29 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD6E0A71166A5989008D6A29 /* NDefs.h */,
 				AD6E0A5F1669B7F9008D6A29 /* icon.png */,
 			);
 			path = Resources;
