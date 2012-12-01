@@ -118,28 +118,21 @@
 
 - (IBAction)buttonRemove:(id)sender {
     
-    NSInteger selectedRow = self.tableView.selectedRow;
+    NSIndexSet *selectedRows = self.tableView.selectedRowIndexes;
     
-    if (selectedRow == -1) return;
-    NSIndexSet *indicies = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(selectedRow, 1)];
+    if (!selectedRows) return;
     
     // Load feed list into memory
     NSMutableArray* currentFeeds = [NSMutableArray arrayWithArray:[NDataStorage getFeeds]];
     
     // Remove selected feed.
     [self.tableView beginUpdates];
-    [currentFeeds removeObjectAtIndex:self.tableView.selectedRow];
+    [self.tableView removeRowsAtIndexes:selectedRows withAnimation:NSTableViewAnimationSlideRight];
+    [currentFeeds removeObjectsAtIndexes:selectedRows];
     [self.tableView endUpdates];
     
     // Save our changes
     [NDataStorage setFeeds:[NSArray arrayWithArray:currentFeeds]];
-    
-    // Manage tableview selection
-    if (currentFeeds.count > selectedRow) {
-        [self.tableView selectRowIndexes:indicies byExtendingSelection:NO];
-    } else if (currentFeeds.count <= selectedRow) {
-        [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(selectedRow - 1, 1)] byExtendingSelection:NO];
-    }
     
     // Manage button state
     if (currentFeeds.count <= 0) [self.buttonRemove setEnabled:NO];
