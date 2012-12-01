@@ -42,8 +42,18 @@
 }
 
 
+- (void)loadSettings {
+    NSMutableDictionary *settings = [[NDataStorage getSettings] mutableCopy];
+    self.textRefreshInterval.integerValue = [[settings valueForKey:@"refreshInterval"] integerValue];
+    if (![settings valueForKey:@"refreshInterval"]) {
+        self.textRefreshInterval.integerValue = 10;
+        [settings setValue:@10 forKey:@"refreshInterval"];
+    }
+    [NDataStorage setSettings:settings];
+}
+
 - (void)saveSettings {
-    //NSInteger refreshInterval = [[[NDataStorage getSettings] valueForKey:@"refreshInterval"] integerValue];
+    NSMutableDictionary *settings = [[NDataStorage getSettings] mutableCopy];
     
 }
 
