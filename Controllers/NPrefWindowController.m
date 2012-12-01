@@ -41,7 +41,9 @@
 }
 
 
-- (IBAction)stepperValueChanged:(id)sender {
+- (void)saveSettings {
+    //NSInteger refreshInterval = [[[NDataStorage getSettings] valueForKey:@"refreshInterval"] integerValue];
+    
 }
 
 - (IBAction)buttonAdd:(id)sender {

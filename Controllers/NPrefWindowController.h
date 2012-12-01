@@ -11,7 +11,6 @@
 @interface NPrefWindowController : NSWindowController <NSTableViewDataSource, NSTableViewDelegate>
 
 // Actions
-- (IBAction)stepperValueChanged:(id)sender;
 - (IBAction)buttonAdd:(id)sender;
 - (IBAction)buttonRemove:(id)sender;
 
@@ -20,5 +19,6 @@
 @property (weak) IBOutlet NSButton *buttonAdd;
 @property (weak) IBOutlet NSTextField *textTitle;
 @property (weak) IBOutlet NSTextField *textFeed;
+@property (weak) IBOutlet NSTextField *textRefreshInterval;
 
 @end
