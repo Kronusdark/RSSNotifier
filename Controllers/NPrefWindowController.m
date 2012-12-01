@@ -34,6 +34,12 @@
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     NSArray *feeds = [NDataStorage getFeeds];
+
+    if (feeds.count == 0) {
+        [self.buttonRemove setEnabled:NO];
+    } else {
+        [self.buttonRemove setEnabled:YES];
+    }
     return feeds.count;
 }
 
@@ -139,4 +145,5 @@
     if (currentFeeds.count <= 0) [self.buttonRemove setEnabled:NO];
 
 }
+
 @end
