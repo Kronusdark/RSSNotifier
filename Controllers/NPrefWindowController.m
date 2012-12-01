@@ -63,15 +63,51 @@
 }
 
 - (IBAction)buttonAdd:(id)sender {
-    NSMutableArray* currentFeeds = [NSMutableArray arrayWithArray:[NDataStorage getFeeds]];
-    if (!currentFeeds) {
-        currentFeeds = [[NSMutableArray alloc] init];
+    
+    NSURL *testURL = [NSURL URLWithString:self.textFeed.stringValue];
+    BOOL bURLOK = NO;
+    BOOL bTitleOK = NO;
+    
+    if (testURL && testURL.scheme && testURL.host) {
+        self.textFeed.backgroundColor = [NSColor whiteColor];
+        bURLOK = YES;
+    } else {
+        self.textFeed.backgroundColor = [NSColor redColor];
     }
-    RSSFeed *feedToAdd = [RSSFeed new];
-    [feedToAdd setTitle:_textTitle.stringValue];
-    [feedToAdd setUrl:_textFeed.stringValue];
-    [currentFeeds addObject:feedToAdd];
-    [NDataStorage setFeeds:[NSArray arrayWithArray:currentFeeds]];
+    
+    if (![self.textTitle.stringValue isEqualToString:@""]) {
+        self.textTitle.backgroundColor = [NSColor whiteColor];
+        bTitleOK = YES;
+    } else {
+        self.textTitle.backgroundColor = [NSColor redColor];
+    }
+    
+    if (!bURLOK || !bTitleOK) {
+        [self.textFeed resignFirstResponder];
+        [self.textTitle resignFirstResponder];
+        [self.window makeFirstResponder:nil];
+        return;
+    } else {
+        // Save to UserPrefs
+        NSMutableArray* currentFeeds = [NSMutableArray arrayWithArray:[NDataStorage getFeeds]];
+        if (!currentFeeds) {
+            currentFeeds = [[NSMutableArray alloc] init];
+        }
+        
+        RSSFeed *feedToAdd = [RSSFeed new];
+        [feedToAdd setTitle:_textTitle.stringValue];
+        [feedToAdd setUrl:_textFeed.stringValue];
+        [currentFeeds addObject:feedToAdd];
+        [NDataStorage setFeeds:[NSArray arrayWithArray:currentFeeds]];
+        // Reload Table
+        [self.tableView reloadData];
+        
+        // Clear text fields
+        self.textTitle.stringValue = @"";
+        self.textFeed.stringValue = @"";
+        [self.window makeFirstResponder:nil];
+    }
+
 }
 
 - (IBAction)buttonRemove:(id)sender {
