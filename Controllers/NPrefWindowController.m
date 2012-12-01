@@ -55,6 +55,11 @@
 - (void)saveSettings {
     NSMutableDictionary *settings = [[NDataStorage getSettings] mutableCopy];
     
+    // Settings
+    
+    [settings setValue:[NSNumber numberWithInteger:self.textRefreshInterval.integerValue] forKey:@"refreshInterval"];
+    
+    [NDataStorage setSettings:settings];
 }
 
 - (IBAction)buttonAdd:(id)sender {
