@@ -10,8 +10,10 @@
 
 @interface NDataStorage : NSObject
 
-@property (weak) NSArray *feeds;
-@property (weak) NSDictionary *settings;
++ (NSArray *)getFeeds;
++ (void)setFeeds:(NSArray *)feeds;
 
++ (NSDictionary *)getSettings;
++ (void)setSettings:(NSDictionary *)settings;
 
 @end

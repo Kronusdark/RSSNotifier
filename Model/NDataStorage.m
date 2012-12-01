@@ -20,7 +20,7 @@
 }
 
 + (NSDictionary *)getSettings {
-    NSDictionary *settings = [[NSUserDefaults standardUserDefaults] arrayForKey:@"settings"];
+    NSDictionary *settings = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"settings"];
     return settings;
 }
 

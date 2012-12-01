@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7C5840561668D92B00B83E08 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5840551668D92B00B83E08 /* Cocoa.framework */; };
-		7C5840601668D92B00B83E08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C58405E1668D92B00B83E08 /* InfoPlist.strings */; };
-		7C5840621668D92B00B83E08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5840611668D92B00B83E08 /* main.m */; };
-		7C5840661668D92B00B83E08 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7C5840641668D92B00B83E08 /* Credits.rtf */; };
-		7C5840691668D92B00B83E08 /* NAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5840681668D92B00B83E08 /* NAppDelegate.m */; };
-		7C58406C1668D92C00B83E08 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C58406A1668D92C00B83E08 /* MainMenu.xib */; };
 		7C5840761668D95E00B83E08 /* RSSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5840751668D95E00B83E08 /* RSSKit.framework */; };
-		7C58412016693BAC00B83E08 /* NRSSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C58411F16693BAC00B83E08 /* NRSSManager.m */; };
-		7C58412516693BE900B83E08 /* NPrefWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C58412416693BE900B83E08 /* NPrefWindowController.m */; };
-		7CAE888E16693DCF00F9E8D1 /* NDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAE888D16693DCF00F9E8D1 /* NDataStorage.m */; };
+		AD6E0A411669A477008D6A29 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6E0A401669A477008D6A29 /* MainMenu.xib */; };
+		AD6E0A4C1669A4C2008D6A29 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AD6E0A481669A4C2008D6A29 /* Credits.rtf */; };
+		AD6E0A4D1669A4C2008D6A29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD6E0A4A1669A4C2008D6A29 /* InfoPlist.strings */; };
+		AD6E0A541669A54A008D6A29 /* NPrefWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6E0A4F1669A4D8008D6A29 /* NPrefWindowController.m */; };
+		AD6E0A551669A54A008D6A29 /* NDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6E0A511669A4E5008D6A29 /* NDataStorage.m */; };
+		AD6E0A561669A54A008D6A29 /* NRSSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6E0A531669A4E5008D6A29 /* NRSSManager.m */; };
+		AD6E0A571669A54A008D6A29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6E0A431669A4A3008D6A29 /* main.m */; };
+		AD6E0A581669A54A008D6A29 /* NAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6E0A451669A4A3008D6A29 /* NAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,21 +25,21 @@
 		7C5840581668D92B00B83E08 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		7C5840591668D92B00B83E08 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7C58405A1668D92B00B83E08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		7C58405D1668D92B00B83E08 /* RSSNotifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RSSNotifier-Info.plist"; sourceTree = "<group>"; };
-		7C58405F1668D92B00B83E08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7C5840611668D92B00B83E08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7C5840631668D92B00B83E08 /* RSSNotifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSSNotifier-Prefix.pch"; sourceTree = "<group>"; };
-		7C5840651668D92B00B83E08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		7C5840671668D92B00B83E08 /* NAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAppDelegate.h; sourceTree = "<group>"; };
-		7C5840681668D92B00B83E08 /* NAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAppDelegate.m; sourceTree = "<group>"; };
-		7C58406B1668D92C00B83E08 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7C5840751668D95E00B83E08 /* RSSKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RSSKit.framework; path = ../RSSKit/build/Release/RSSKit.framework; sourceTree = "<group>"; };
-		7C58411E16693BAC00B83E08 /* NRSSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRSSManager.h; path = Model/NRSSManager.h; sourceTree = "<group>"; };
-		7C58411F16693BAC00B83E08 /* NRSSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRSSManager.m; path = Model/NRSSManager.m; sourceTree = "<group>"; };
-		7C58412316693BE900B83E08 /* NPrefWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NPrefWindowController.h; path = Controllers/NPrefWindowController.h; sourceTree = "<group>"; };
-		7C58412416693BE900B83E08 /* NPrefWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NPrefWindowController.m; path = Controllers/NPrefWindowController.m; sourceTree = "<group>"; };
-		7CAE888C16693DCF00F9E8D1 /* NDataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDataStorage.h; path = Model/NDataStorage.h; sourceTree = "<group>"; };
-		7CAE888D16693DCF00F9E8D1 /* NDataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDataStorage.m; path = Model/NDataStorage.m; sourceTree = "<group>"; };
+		AD6E0A401669A477008D6A29 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = View/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		AD6E0A431669A4A3008D6A29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Support/main.m; sourceTree = SOURCE_ROOT; };
+		AD6E0A441669A4A3008D6A29 /* NAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NAppDelegate.h; path = Support/NAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		AD6E0A451669A4A3008D6A29 /* NAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NAppDelegate.m; path = Support/NAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		AD6E0A461669A4A3008D6A29 /* RSSNotifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RSSNotifier-Info.plist"; path = "Support/RSSNotifier-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AD6E0A471669A4A3008D6A29 /* RSSNotifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RSSNotifier-Prefix.pch"; path = "Support/RSSNotifier-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		AD6E0A491669A4C2008D6A29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = Support/en.lproj/Credits.rtf; sourceTree = SOURCE_ROOT; };
+		AD6E0A4B1669A4C2008D6A29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Support/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		AD6E0A4E1669A4D8008D6A29 /* NPrefWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NPrefWindowController.h; path = Controllers/NPrefWindowController.h; sourceTree = SOURCE_ROOT; };
+		AD6E0A4F1669A4D8008D6A29 /* NPrefWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NPrefWindowController.m; path = Controllers/NPrefWindowController.m; sourceTree = SOURCE_ROOT; };
+		AD6E0A501669A4E5008D6A29 /* NDataStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NDataStorage.h; path = Model/NDataStorage.h; sourceTree = SOURCE_ROOT; };
+		AD6E0A511669A4E5008D6A29 /* NDataStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NDataStorage.m; path = Model/NDataStorage.m; sourceTree = SOURCE_ROOT; };
+		AD6E0A521669A4E5008D6A29 /* NRSSManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NRSSManager.h; path = Model/NRSSManager.h; sourceTree = SOURCE_ROOT; };
+		AD6E0A531669A4E5008D6A29 /* NRSSManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NRSSManager.m; path = Model/NRSSManager.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,32 +98,32 @@
 				7C58412616693BEE00B83E08 /* Controller */,
 				7C58412216693BC100B83E08 /* View */,
 				7C58412116693BB300B83E08 /* Model */,
-				7C5840671668D92B00B83E08 /* NAppDelegate.h */,
-				7C5840681668D92B00B83E08 /* NAppDelegate.m */,
-				7C58405C1668D92B00B83E08 /* Supporting Files */,
+				7C58405C1668D92B00B83E08 /* Support */,
 			);
 			path = RSSNotifier;
 			sourceTree = "<group>";
 		};
-		7C58405C1668D92B00B83E08 /* Supporting Files */ = {
+		7C58405C1668D92B00B83E08 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				7C58405D1668D92B00B83E08 /* RSSNotifier-Info.plist */,
-				7C58405E1668D92B00B83E08 /* InfoPlist.strings */,
-				7C5840611668D92B00B83E08 /* main.m */,
-				7C5840631668D92B00B83E08 /* RSSNotifier-Prefix.pch */,
-				7C5840641668D92B00B83E08 /* Credits.rtf */,
+				AD6E0A431669A4A3008D6A29 /* main.m */,
+				AD6E0A441669A4A3008D6A29 /* NAppDelegate.h */,
+				AD6E0A451669A4A3008D6A29 /* NAppDelegate.m */,
+				AD6E0A461669A4A3008D6A29 /* RSSNotifier-Info.plist */,
+				AD6E0A471669A4A3008D6A29 /* RSSNotifier-Prefix.pch */,
+				AD6E0A481669A4C2008D6A29 /* Credits.rtf */,
+				AD6E0A4A1669A4C2008D6A29 /* InfoPlist.strings */,
 			);
-			name = "Supporting Files";
+			name = Support;
 			sourceTree = "<group>";
 		};
 		7C58412116693BB300B83E08 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7C58411E16693BAC00B83E08 /* NRSSManager.h */,
-				7C58411F16693BAC00B83E08 /* NRSSManager.m */,
-				7CAE888C16693DCF00F9E8D1 /* NDataStorage.h */,
-				7CAE888D16693DCF00F9E8D1 /* NDataStorage.m */,
+				AD6E0A501669A4E5008D6A29 /* NDataStorage.h */,
+				AD6E0A511669A4E5008D6A29 /* NDataStorage.m */,
+				AD6E0A521669A4E5008D6A29 /* NRSSManager.h */,
+				AD6E0A531669A4E5008D6A29 /* NRSSManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -131,7 +131,7 @@
 		7C58412216693BC100B83E08 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7C58406A1668D92C00B83E08 /* MainMenu.xib */,
+				AD6E0A401669A477008D6A29 /* MainMenu.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -139,8 +139,8 @@
 		7C58412616693BEE00B83E08 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7C58412316693BE900B83E08 /* NPrefWindowController.h */,
-				7C58412416693BE900B83E08 /* NPrefWindowController.m */,
+				AD6E0A4E1669A4D8008D6A29 /* NPrefWindowController.h */,
+				AD6E0A4F1669A4D8008D6A29 /* NPrefWindowController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -197,9 +197,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C5840601668D92B00B83E08 /* InfoPlist.strings in Resources */,
-				7C5840661668D92B00B83E08 /* Credits.rtf in Resources */,
-				7C58406C1668D92C00B83E08 /* MainMenu.xib in Resources */,
+				AD6E0A411669A477008D6A29 /* MainMenu.xib in Resources */,
+				AD6E0A4C1669A4C2008D6A29 /* Credits.rtf in Resources */,
+				AD6E0A4D1669A4C2008D6A29 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,39 +210,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C5840621668D92B00B83E08 /* main.m in Sources */,
-				7C5840691668D92B00B83E08 /* NAppDelegate.m in Sources */,
-				7C58412016693BAC00B83E08 /* NRSSManager.m in Sources */,
-				7C58412516693BE900B83E08 /* NPrefWindowController.m in Sources */,
-				7CAE888E16693DCF00F9E8D1 /* NDataStorage.m in Sources */,
+				AD6E0A541669A54A008D6A29 /* NPrefWindowController.m in Sources */,
+				AD6E0A551669A54A008D6A29 /* NDataStorage.m in Sources */,
+				AD6E0A561669A54A008D6A29 /* NRSSManager.m in Sources */,
+				AD6E0A571669A54A008D6A29 /* main.m in Sources */,
+				AD6E0A581669A54A008D6A29 /* NAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7C58405E1668D92B00B83E08 /* InfoPlist.strings */ = {
+		AD6E0A481669A4C2008D6A29 /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7C58405F1668D92B00B83E08 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7C5840641668D92B00B83E08 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C5840651668D92B00B83E08 /* en */,
+				AD6E0A491669A4C2008D6A29 /* en */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		7C58406A1668D92C00B83E08 /* MainMenu.xib */ = {
+		AD6E0A4A1669A4C2008D6A29 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7C58406B1668D92C00B83E08 /* en */,
+				AD6E0A4B1669A4C2008D6A29 /* en */,
 			);
-			name = MainMenu.xib;
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -306,8 +298,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RSSNotifier-Prefix.pch";
-				INFOPLIST_FILE = "RSSNotifier-Info.plist";
+				GCC_PREFIX_HEADER = "Support/RSSNotifier-Prefix.pch";
+				INFOPLIST_FILE = "Support/RSSNotifier-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -318,8 +310,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RSSNotifier-Prefix.pch";
-				INFOPLIST_FILE = "RSSNotifier-Info.plist";
+				GCC_PREFIX_HEADER = "Support/RSSNotifier-Prefix.pch";
+				INFOPLIST_FILE = "Support/RSSNotifier-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
