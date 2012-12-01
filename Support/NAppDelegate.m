@@ -10,6 +10,7 @@
 
 @interface NAppDelegate () {
     NSStatusItem *item;
+    IBOutlet NSMenu *statusMenu;
 }
 
 @end
@@ -19,6 +20,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    [self enableStatusMenu];
  
 }
 
@@ -28,6 +30,7 @@
     item.image = [NSImage imageNamed:@"icon"];
     [item setEnabled:YES];
     [item setHighlightMode:YES];
+    [item setMenu:statusMenu];
 }
 
 @end
