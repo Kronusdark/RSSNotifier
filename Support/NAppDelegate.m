@@ -8,11 +8,26 @@
 
 #import "NAppDelegate.h"
 
+@interface NAppDelegate () {
+    NSStatusItem *item;
+}
+
+@end
+
 @implementation NAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+ 
+}
+
+- (void)enableStatusMenu {
+    NSStatusBar *bar = [NSStatusBar systemStatusBar];
+    item = [bar statusItemWithLength:24];
+    item.image = [NSImage imageNamed:@"icon"];
+    [item setEnabled:YES];
+    [item setHighlightMode:YES];
 }
 
 @end

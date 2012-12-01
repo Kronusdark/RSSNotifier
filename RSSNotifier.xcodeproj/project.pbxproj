@@ -17,6 +17,7 @@
 		AD6E0A561669A54A008D6A29 /* NRSSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6E0A531669A4E5008D6A29 /* NRSSManager.m */; };
 		AD6E0A571669A54A008D6A29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6E0A431669A4A3008D6A29 /* main.m */; };
 		AD6E0A581669A54A008D6A29 /* NAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6E0A451669A4A3008D6A29 /* NAppDelegate.m */; };
+		AD6E0A601669B7F9008D6A29 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AD6E0A5F1669B7F9008D6A29 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		AD6E0A511669A4E5008D6A29 /* NDataStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NDataStorage.m; path = Model/NDataStorage.m; sourceTree = SOURCE_ROOT; };
 		AD6E0A521669A4E5008D6A29 /* NRSSManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NRSSManager.h; path = Model/NRSSManager.h; sourceTree = SOURCE_ROOT; };
 		AD6E0A531669A4E5008D6A29 /* NRSSManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NRSSManager.m; path = Model/NRSSManager.m; sourceTree = SOURCE_ROOT; };
+		AD6E0A5F1669B7F9008D6A29 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		7C58405B1668D92B00B83E08 /* RSSNotifier */ = {
 			isa = PBXGroup;
 			children = (
+				AD6E0A5E1669B7F9008D6A29 /* Resources */,
 				7C58412616693BEE00B83E08 /* Controller */,
 				7C58412216693BC100B83E08 /* View */,
 				7C58412116693BB300B83E08 /* Model */,
@@ -144,6 +147,14 @@
 			);
 			name = Controller;
 			sourceTree = "<group>";
+		};
+		AD6E0A5E1669B7F9008D6A29 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD6E0A5F1669B7F9008D6A29 /* icon.png */,
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -200,6 +211,7 @@
 				AD6E0A411669A477008D6A29 /* MainMenu.xib in Resources */,
 				AD6E0A4C1669A4C2008D6A29 /* Credits.rtf in Resources */,
 				AD6E0A4D1669A4C2008D6A29 /* InfoPlist.strings in Resources */,
+				AD6E0A601669B7F9008D6A29 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
