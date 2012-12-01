@@ -33,7 +33,8 @@
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [[NDataStorage getFeeds] count];
+    NSArray *feeds = [NDataStorage getFeeds];
+    return feeds.count;
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
@@ -48,11 +49,14 @@
 
 - (IBAction)buttonAdd:(id)sender {
     NSMutableArray* currentFeeds = [NSMutableArray arrayWithArray:[NDataStorage getFeeds]];
+    if (!currentFeeds) {
+        currentFeeds = [[NSMutableArray alloc] init];
+    }
     RSSFeed *feedToAdd = [RSSFeed new];
     [feedToAdd setTitle:_textTitle.stringValue];
     [feedToAdd setUrl:_textFeed.stringValue];
     [currentFeeds addObject:feedToAdd];
-    [NDataStorage setFeeds:@[currentFeeds]];
+    [NDataStorage setFeeds:[NSArray arrayWithArray:currentFeeds]];
 }
 
 - (IBAction)buttonRemove:(id)sender {
@@ -60,6 +64,6 @@
     [_tableView beginUpdates];
     [currentFeeds removeObjectAtIndex:_tableView.selectedRow];
     [_tableView endUpdates];
-    [NDataStorage setFeeds:@[currentFeeds]];
+    [NDataStorage setFeeds:[NSArray arrayWithArray:currentFeeds]];
 }
 @end

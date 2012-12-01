@@ -1410,7 +1410,7 @@
 													<reference key="NSTableView" ref="535427141"/>
 												</object>
 												<object class="NSTableColumn" id="475348508">
-													<string key="NSIdentifier">feed</string>
+													<string key="NSIdentifier">url</string>
 													<double key="NSWidth">314</double>
 													<double key="NSMinWidth">40</double>
 													<double key="NSMaxWidth">1000</double>
@@ -1651,6 +1651,7 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{374, 11}, {90, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
+							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="913276926">
@@ -1739,7 +1740,7 @@
 					<reference key="NSSuperview"/>
 					<reference key="NSNextKeyView" ref="976765155"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1440, 900}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
