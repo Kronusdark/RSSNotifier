@@ -47,8 +47,19 @@
 }
 
 - (IBAction)buttonAdd:(id)sender {
+    NSMutableArray* currentFeeds = [NSMutableArray arrayWithArray:[NDataStorage getFeeds]];
+    RSSFeed *feedToAdd = [RSSFeed new];
+    [feedToAdd setTitle:_textTitle.stringValue];
+    [feedToAdd setUrl:_textFeed.stringValue];
+    [currentFeeds addObject:feedToAdd];
+    [NDataStorage setFeeds:@[currentFeeds]];
 }
 
 - (IBAction)buttonRemove:(id)sender {
+    NSMutableArray* currentFeeds = [NSMutableArray arrayWithArray:[NDataStorage getFeeds]];
+    [_tableView beginUpdates];
+    [currentFeeds removeObjectAtIndex:_tableView.selectedRow];
+    [_tableView endUpdates];
+    [NDataStorage setFeeds:@[currentFeeds]];
 }
 @end

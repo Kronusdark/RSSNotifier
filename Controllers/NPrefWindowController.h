@@ -15,6 +15,7 @@
 - (IBAction)buttonRemove:(id)sender;
 
 // Outlets
+@property (weak) IBOutlet NSTableView *tableView;
 @property (weak) IBOutlet NSButton *buttonRemove;
 @property (weak) IBOutlet NSButton *buttonAdd;
 @property (weak) IBOutlet NSTextField *textTitle;

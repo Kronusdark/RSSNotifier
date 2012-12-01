@@ -11,21 +11,28 @@
 @implementation NDataStorage
 
 + (NSArray *)getFeeds {
-    NSArray *feeds = [[NSUserDefaults standardUserDefaults] arrayForKey:@"feeds"];
-    return feeds;
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [userDefaults objectForKey:@"feeds"];
+    return [NSKeyedUnarchiver unarchiveObjectWithData:data];
 }
 
 + (void)setFeeds:(NSArray *)feeds {
-    [[NSUserDefaults standardUserDefaults] setObject:feeds forKey:@"feeds"];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:feeds];
+    [userDefaults setObject:data forKey:@"feeds"];
+    [userDefaults synchronize];
 }
 
 + (NSDictionary *)getSettings {
-    NSDictionary *settings = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"settings"];
-    return settings;
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [userDefaults objectForKey:@"settings"];
+    return [NSKeyedUnarchiver unarchiveObjectWithData:data];
 }
 
 + (void)setSettings:(NSDictionary *)settings {
-    [[NSUserDefaults standardUserDefaults] setObject:settings forKey:@"feeds"];
-}
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:settings];
+    [userDefaults setObject:data forKey:@"settings"];
+    [userDefaults synchronize];}
 
 @end
