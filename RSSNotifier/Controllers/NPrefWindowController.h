@@ -20,5 +20,6 @@
 @property (weak) IBOutlet NSButton *buttonAdd;
 @property (weak) IBOutlet NSTextField *textTitle;
 @property (weak) IBOutlet NSTextField *textFeed;
+@property (weak) IBOutlet NSTextField *labelRefreshInterval;
 
 @end
