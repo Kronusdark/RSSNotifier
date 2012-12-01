@@ -33,4 +33,14 @@
     [item setMenu:statusMenu];
 }
 
+- (IBAction)showWindow:(id)sender {
+    [self.window setIsVisible:YES];
+}
+
+- (IBAction)quitApplication:(id)sender {
+    [[NSApplication sharedApplication] terminate:self];
+}
+- (IBAction)refreshFeeds:(id)sender {
+}
+
 @end
