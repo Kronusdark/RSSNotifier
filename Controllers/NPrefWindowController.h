@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NPrefWindowController : NSWindowController <NSTableViewDataSource, NSTableViewDelegate>
+@interface NPrefWindowController : NSWindowController <NSTableViewDataSource, NSTableViewDelegate, NSWindowDelegate>
 
 // Actions
 - (IBAction)buttonAdd:(id)sender;

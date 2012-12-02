@@ -15,6 +15,7 @@
 @property (strong) NSStatusItem *item;
 @property (weak) IBOutlet NSMenu *menu;
 @property (strong) IBOutlet NRSSManager *rssManager;
+@property (weak) IBOutlet NSObjectController *settingsController;
 @property (strong) NSTimer *timer;
 
 @end
@@ -57,7 +58,13 @@
 }
 
 - (void)initTimer {
-    self.timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:(NSInteger)[[NSUserDefaults standardUserDefaults] valueForKey:@"refreshInterval"] target:self selector:@selector(fire:) userInfo:nil repeats:YES];
+    if (self.timer) {
+        [self.timer invalidate];
+    }
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSTimeInterval time = [[defaults valueForKeyPath:@"refreshInterval"] integerValue];
+    self.timer = [NSTimer timerWithTimeInterval:time target:self selector:@selector(fire:) userInfo:nil repeats:YES];
+    [self.timer setFireDate:[NSDate date]];
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
@@ -65,7 +72,8 @@
     NSLog(@"hit");
 }
 
-- (void)resetTimer:(NSTimer*)timer {
-    
+- (IBAction)updateSetting:(id)sender {
+    [self initTimer];
 }
+
 @end
