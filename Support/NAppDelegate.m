@@ -7,11 +7,13 @@
 //
 
 #import "NAppDelegate.h"
+#import "NRSSManager.h"
 
-@interface NAppDelegate () {
-    NSStatusItem *item;
-    IBOutlet NSMenu *statusMenu;
-}
+@interface NAppDelegate ()
+
+@property (strong) NSStatusItem *item;
+@property (weak) IBOutlet NSMenu *menu;
+@property (strong) IBOutlet NRSSManager *rssManager;
 
 @end
 
@@ -26,11 +28,11 @@
 
 - (void)enableStatusMenu {
     NSStatusBar *bar = [NSStatusBar systemStatusBar];
-    item = [bar statusItemWithLength:24];
-    item.image = [NSImage imageNamed:@"icon"];
-    [item setEnabled:YES];
-    [item setHighlightMode:YES];
-    [item setMenu:statusMenu];
+    self.item = [bar statusItemWithLength:24];
+    self.item.image = [NSImage imageNamed:@"icon"];
+    [self.item setEnabled:YES];
+    [self.item setHighlightMode:NO];
+    [self.item setMenu:self.menu];
 }
 
 - (IBAction)showWindow:(id)sender {
