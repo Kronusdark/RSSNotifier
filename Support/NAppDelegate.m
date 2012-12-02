@@ -57,7 +57,7 @@
 }
 
 - (void)initTimer {
-    self.timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:(NSInteger)[[NDataStorage getSettings] valueForKey:kNKeyRefreshInterval] target:self selector:@selector(fire:) userInfo:nil repeats:YES];
+    self.timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:(NSInteger)[[NSUserDefaults standardUserDefaults] valueForKey:@"refreshInterval"] target:self selector:@selector(fire:) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 

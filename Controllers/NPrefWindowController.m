@@ -33,22 +33,6 @@
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
 
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    NSArray *feeds = [NDataStorage getFeedList];
-
-    if (feeds.count == 0) {
-        [self.buttonRemove setEnabled:NO];
-    } else {
-        [self.buttonRemove setEnabled:YES];
-    }
-    return feeds.count;
-}
-
-- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    return [[[NDataStorage getFeedList] objectAtIndex:row] valueForKey:tableColumn.identifier];
-}
-
-
 - (void)loadSettings {
     NSMutableDictionary *settings = [[NDataStorage getSettings] mutableCopy];
     self.textRefreshInterval.integerValue = [[settings valueForKey:kNKeyRefreshInterval] integerValue];
