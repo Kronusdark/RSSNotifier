@@ -11,3 +11,5 @@
 #define kNKeySettings @"settings"
 #define kNKeyRefreshInterval @"refreshInterval"
 #define kNKeyFeeds @"feeds"
+#define kNKeyLink @"link"
+#define kNKeyFeedList @"feedList"

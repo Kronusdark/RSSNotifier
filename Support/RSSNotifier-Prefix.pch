@@ -6,4 +6,5 @@
     #import <Cocoa/Cocoa.h>
     #import <RSSKit/RSSKit.h>
     #import "NDefs.h"
+    #import "NNewFeedItemProtocol.h"
 #endif

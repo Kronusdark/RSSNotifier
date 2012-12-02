@@ -18,6 +18,7 @@
 		AD6E0A571669A54A008D6A29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6E0A431669A4A3008D6A29 /* main.m */; };
 		AD6E0A581669A54A008D6A29 /* NAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6E0A451669A4A3008D6A29 /* NAppDelegate.m */; };
 		AD6E0A601669B7F9008D6A29 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AD6E0A5F1669B7F9008D6A29 /* icon.png */; };
+		ADD3E6C0166B09FE0032A53D /* NRSSFeedListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3E6BF166B09FE0032A53D /* NRSSFeedListItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,9 @@
 		AD6E0A531669A4E5008D6A29 /* NRSSManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NRSSManager.m; path = Model/NRSSManager.m; sourceTree = SOURCE_ROOT; };
 		AD6E0A5F1669B7F9008D6A29 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		AD6E0A71166A5989008D6A29 /* NDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDefs.h; sourceTree = "<group>"; };
+		ADD3E6BE166B09FE0032A53D /* NRSSFeedListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NRSSFeedListItem.h; path = Model/NRSSFeedListItem.h; sourceTree = SOURCE_ROOT; };
+		ADD3E6BF166B09FE0032A53D /* NRSSFeedListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NRSSFeedListItem.m; path = Model/NRSSFeedListItem.m; sourceTree = SOURCE_ROOT; };
+		ADD3E6C2166B0C8F0032A53D /* NNewFeedItemProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNewFeedItemProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 				AD6E0A511669A4E5008D6A29 /* NDataStorage.m */,
 				AD6E0A521669A4E5008D6A29 /* NRSSManager.h */,
 				AD6E0A531669A4E5008D6A29 /* NRSSManager.m */,
+				ADD3E6BE166B09FE0032A53D /* NRSSFeedListItem.h */,
+				ADD3E6BF166B09FE0032A53D /* NRSSFeedListItem.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -154,6 +160,7 @@
 			children = (
 				AD6E0A71166A5989008D6A29 /* NDefs.h */,
 				AD6E0A5F1669B7F9008D6A29 /* icon.png */,
+				ADD3E6C2166B0C8F0032A53D /* NNewFeedItemProtocol.h */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -229,6 +236,7 @@
 				AD6E0A561669A54A008D6A29 /* NRSSManager.m in Sources */,
 				AD6E0A571669A54A008D6A29 /* main.m in Sources */,
 				AD6E0A581669A54A008D6A29 /* NAppDelegate.m in Sources */,
+				ADD3E6C0166B09FE0032A53D /* NRSSFeedListItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

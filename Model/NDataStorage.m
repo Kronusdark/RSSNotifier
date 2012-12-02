@@ -10,6 +10,7 @@
 
 @implementation NDataStorage
 
+// Cached Feeds
 + (NSArray *)getFeeds {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSData *data = [userDefaults objectForKey:kNKeyFeeds];
@@ -23,6 +24,23 @@
     [userDefaults synchronize];
 }
 
+
+// Feed List
++ (NSArray *)getFeedList {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [userDefaults objectForKey:kNKeyFeedList];
+    return [NSKeyedUnarchiver unarchiveObjectWithData:data];
+}
+
++ (void)setFeedList:(NSArray *)feedList {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:feedList];
+    [userDefaults setObject:data forKey:kNKeyFeedList];
+    [userDefaults synchronize];
+}
+
+
+// Settings
 + (NSDictionary *)getSettings {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSData *data = [userDefaults objectForKey:kNKeySettings];

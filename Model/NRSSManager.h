@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NRSSManager : NSObject
+@interface NRSSManager : NSObject <RSSParserDelegate>
+
+@property (weak) id<NNewFeedItemProtocol> delegate;
 
 @end

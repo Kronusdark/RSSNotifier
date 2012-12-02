@@ -8,6 +8,7 @@
 
 #import "NPrefWindowController.h"
 #import "NDataStorage.h"
+#import "NRSSFeedListItem.h"
 
 @interface NPrefWindowController ()
 
@@ -33,7 +34,7 @@
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    NSArray *feeds = [NDataStorage getFeeds];
+    NSArray *feeds = [NDataStorage getFeedList];
 
     if (feeds.count == 0) {
         [self.buttonRemove setEnabled:NO];
@@ -44,7 +45,7 @@
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    return [[[NDataStorage getFeeds] objectAtIndex:row] valueForKey:tableColumn.identifier];
+    return [[[NDataStorage getFeedList] objectAtIndex:row] valueForKey:tableColumn.identifier];
 }
 
 
@@ -95,16 +96,16 @@
         return;
     } else {
         // Save to UserPrefs
-        NSMutableArray* currentFeeds = [NSMutableArray arrayWithArray:[NDataStorage getFeeds]];
+        NSMutableArray* currentFeeds = [NSMutableArray arrayWithArray:[NDataStorage getFeedList]];
         if (!currentFeeds) {
             currentFeeds = [[NSMutableArray alloc] init];
         }
         
-        RSSFeed *feedToAdd = [RSSFeed new];
+        NRSSFeedListItem *feedToAdd = [NRSSFeedListItem new];
         [feedToAdd setTitle:_textTitle.stringValue];
         [feedToAdd setUrl:_textFeed.stringValue];
         [currentFeeds addObject:feedToAdd];
-        [NDataStorage setFeeds:[NSArray arrayWithArray:currentFeeds]];
+        [NDataStorage setFeedList:[NSArray arrayWithArray:currentFeeds]];
         // Reload Table
         [self.tableView reloadData];
         
@@ -123,7 +124,7 @@
     if (!selectedRows) return;
     
     // Load feed list into memory
-    NSMutableArray* currentFeeds = [NSMutableArray arrayWithArray:[NDataStorage getFeeds]];
+    NSMutableArray* currentFeeds = [NSMutableArray arrayWithArray:[NDataStorage getFeedList]];
     
     // Remove selected feed.
     [self.tableView beginUpdates];
@@ -132,7 +133,7 @@
     [self.tableView endUpdates];
     
     // Save our changes
-    [NDataStorage setFeeds:[NSArray arrayWithArray:currentFeeds]];
+    [NDataStorage setFeedList:[NSArray arrayWithArray:currentFeeds]];
     
     // Manage button state
     if (currentFeeds.count <= 0) [self.buttonRemove setEnabled:NO];

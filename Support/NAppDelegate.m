@@ -8,12 +8,14 @@
 
 #import "NAppDelegate.h"
 #import "NRSSManager.h"
+#import "NDataStorage.h"
 
 @interface NAppDelegate ()
 
 @property (strong) NSStatusItem *item;
 @property (weak) IBOutlet NSMenu *menu;
 @property (strong) IBOutlet NRSSManager *rssManager;
+@property (strong) NSTimer *timer;
 
 @end
 
@@ -23,6 +25,7 @@
 {
     // Insert code here to initialize your application
     [self enableStatusMenu];
+    [self initTimer];
  
 }
 
@@ -45,4 +48,24 @@
 - (IBAction)refreshFeeds:(id)sender {
 }
 
+- (void)userNotificationCenter:(NSUserNotificationCenter *)center didActivateNotification:(NSUserNotification *)notification {
+    
+}
+
+- (void)newFeedItem:(RSSFeed *)feed {
+    NSLog(@"%@", [[feed.articles objectAtIndex:0] title]);
+}
+
+- (void)initTimer {
+    self.timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:(NSInteger)[[NDataStorage getSettings] valueForKey:kNKeyRefreshInterval] target:self selector:@selector(fire:) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)fire:(id)sender {
+    NSLog(@"hit");
+}
+
+- (void)resetTimer:(NSTimer*)timer {
+    
+}
 @end

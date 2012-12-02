@@ -13,6 +13,9 @@
 + (NSArray *)getFeeds;
 + (void)setFeeds:(NSArray *)feeds;
 
++ (NSArray *)getFeedList;
++ (void)setFeedList:(NSArray *)feedList;
+
 + (NSDictionary *)getSettings;
 + (void)setSettings:(NSDictionary *)settings;
 
