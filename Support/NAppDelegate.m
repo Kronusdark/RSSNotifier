@@ -25,9 +25,18 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    [self loadInitialValues];
     [self enableStatusMenu];
     [self initTimer];
+
  
+}
+
+- (void)loadInitialValues {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *initialValues = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"defaults" ofType:@"plist"]];
+    [defaults registerDefaults:initialValues];
+    
 }
 
 - (void)enableStatusMenu {
@@ -62,7 +71,7 @@
         [self.timer invalidate];
     }
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSTimeInterval time = [[defaults valueForKeyPath:@"refreshInterval"] integerValue];
+    NSTimeInterval time = [[defaults valueForKeyPath:kNKeyRefreshInterval] integerValue];
     self.timer = [NSTimer timerWithTimeInterval:time target:self selector:@selector(fire:) userInfo:nil repeats:YES];
     [self.timer setFireDate:[NSDate date]];
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];

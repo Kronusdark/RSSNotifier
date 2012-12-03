@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7C5840561668D92B00B83E08 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5840551668D92B00B83E08 /* Cocoa.framework */; };
 		7C5840761668D95E00B83E08 /* RSSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5840751668D95E00B83E08 /* RSSKit.framework */; };
+		7C5CD0B6166CD83A000436BD /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CD0B5166CD83A000436BD /* defaults.plist */; };
 		AD6E0A411669A477008D6A29 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6E0A401669A477008D6A29 /* MainMenu.xib */; };
 		AD6E0A4C1669A4C2008D6A29 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AD6E0A481669A4C2008D6A29 /* Credits.rtf */; };
 		AD6E0A4D1669A4C2008D6A29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD6E0A4A1669A4C2008D6A29 /* InfoPlist.strings */; };
@@ -28,6 +29,7 @@
 		7C5840591668D92B00B83E08 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7C58405A1668D92B00B83E08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7C5840751668D95E00B83E08 /* RSSKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RSSKit.framework; path = ../RSSKit/build/Release/RSSKit.framework; sourceTree = "<group>"; };
+		7C5CD0B5166CD83A000436BD /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
 		AD6E0A401669A477008D6A29 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = View/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		AD6E0A431669A4A3008D6A29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Support/main.m; sourceTree = SOURCE_ROOT; };
 		AD6E0A441669A4A3008D6A29 /* NAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NAppDelegate.h; path = Support/NAppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -161,6 +163,7 @@
 				AD6E0A71166A5989008D6A29 /* NDefs.h */,
 				AD6E0A5F1669B7F9008D6A29 /* icon.png */,
 				ADD3E6C2166B0C8F0032A53D /* NNewFeedItemProtocol.h */,
+				7C5CD0B5166CD83A000436BD /* defaults.plist */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -221,6 +224,7 @@
 				AD6E0A4C1669A4C2008D6A29 /* Credits.rtf in Resources */,
 				AD6E0A4D1669A4C2008D6A29 /* InfoPlist.strings in Resources */,
 				AD6E0A601669B7F9008D6A29 /* icon.png in Resources */,
+				7C5CD0B6166CD83A000436BD /* defaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
