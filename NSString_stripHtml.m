@@ -17,10 +17,7 @@
     }
     return self;
 }
-- (void)dealloc {
-    [strings release];
-    [super dealloc];
-}
+
 - (void)parser:(NSXMLParser*)parser foundCharacters:(NSString*)string {
     [strings addObject:string];
 }
@@ -30,6 +27,7 @@
 @end
 
 @implementation NSString (stripHtml)
+
 - (NSString*)stripHtml {
     // take this string obj and wrap it in a root element to ensure only a single root element exists
     NSString* string = [NSString stringWithFormat:@"<root>%@</root>", self];
@@ -53,11 +51,8 @@
     // any chars found while parsing are the stripped content
     NSString* strippedString = [parsee getCharsFound];
     
-    // clean up
-    [parser release];
-    [parsee release];
-    
     // get the raw text out of the parsee after parsing, and return it
     return strippedString;
 }
+
 @end
