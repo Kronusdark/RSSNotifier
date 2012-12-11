@@ -52,8 +52,6 @@
 - (IBAction)quitApplication:(id)sender {
     [[NSApplication sharedApplication] terminate:self];
 }
-- (IBAction)refreshFeeds:(id)sender {
-}
 
 - (void)userNotificationCenter:(NSUserNotificationCenter *)center didActivateNotification:(NSUserNotification *)notification {
     

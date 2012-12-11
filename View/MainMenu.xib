@@ -299,6 +299,7 @@
 								<int key="NSCellFlags2">272630784</int>
 								<string key="NSContents"/>
 								<reference key="NSSupport" ref="262840724"/>
+								<string key="NSPlaceholderString">Slashdot</string>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="364423815"/>
 								<bool key="NSDrawsBackground">YES</bool>
@@ -357,6 +358,7 @@
 								<int key="NSCellFlags2">272630784</int>
 								<string key="NSContents"/>
 								<reference key="NSSupport" ref="262840724"/>
+								<string key="NSPlaceholderString">http://rss.slashdot.org/Slashdot/slashdot</string>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="1057896085"/>
 								<bool key="NSDrawsBackground">YES</bool>
@@ -527,14 +529,6 @@
 							<string key="NSResourceName">NSMenuMixedState</string>
 						</object>
 					</object>
-					<object class="NSMenuItem" id="733144107">
-						<reference key="NSMenu" ref="327431656"/>
-						<string key="NSTitle">Check Now</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="679779514"/>
-						<reference key="NSMixedImage" ref="148351621"/>
-					</object>
 					<object class="NSMenuItem" id="450916235">
 						<reference key="NSMenu" ref="327431656"/>
 						<string key="NSTitle">Quit</string>
@@ -567,6 +561,7 @@
 				</array>
 				<string key="NSObjectClassName">NRSSFeedListItem</string>
 				<bool key="NSEditable">YES</bool>
+				<bool key="NSAutomaticallyPreparesContent">YES</bool>
 				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
 				<bool key="NSAvoidsEmptySelection">YES</bool>
 				<bool key="NSPreservesSelection">YES</bool>
@@ -591,6 +586,9 @@
 				<string key="NSObjectClassName">NSNumber</string>
 				<bool key="NSEditable">YES</bool>
 				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
+			</object>
+			<object class="NSUserDefaultsController" id="340226183">
+				<bool key="NSSharedInstance">YES</bool>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -621,27 +619,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">showWindow:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="880940072"/>
-					</object>
-					<int key="connectionID">1060</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">quitApplication:</string>
 						<reference key="source" ref="976324537"/>
 						<reference key="destination" ref="450916235"/>
 					</object>
 					<int key="connectionID">1061</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">refreshFeeds:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="733144107"/>
-					</object>
-					<int key="connectionID">1062</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -826,6 +808,46 @@
 						<reference key="destination" ref="225369595"/>
 					</object>
 					<int key="connectionID">1315</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">showWindow:</string>
+						<reference key="source" ref="329069325"/>
+						<reference key="destination" ref="880940072"/>
+					</object>
+					<int key="connectionID">1394</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">enabled: canRemove</string>
+						<reference key="source" ref="854468421"/>
+						<reference key="destination" ref="368897923"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="854468421"/>
+							<reference key="NSDestination" ref="368897923"/>
+							<string key="NSLabel">enabled: canRemove</string>
+							<string key="NSBinding">enabled</string>
+							<string key="NSKeyPath">canRemove</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">1386</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">enabled: canAdd</string>
+						<reference key="source" ref="158704611"/>
+						<reference key="destination" ref="368897923"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="158704611"/>
+							<reference key="NSDestination" ref="368897923"/>
+							<string key="NSLabel">enabled: canAdd</string>
+							<string key="NSBinding">enabled</string>
+							<string key="NSKeyPath">canAdd</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">1393</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -1355,7 +1377,6 @@
 								<int key="contentType">3</int>
 							</object>
 							<reference ref="976765155"/>
-							<reference ref="364423815"/>
 							<reference ref="1057896085"/>
 							<reference ref="684411952"/>
 							<reference ref="158704611"/>
@@ -1364,6 +1385,7 @@
 							<reference ref="124028410"/>
 							<reference ref="225369595"/>
 							<reference ref="854468421"/>
+							<reference ref="364423815"/>
 						</array>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -1715,7 +1737,6 @@
 						<reference key="object" ref="327431656"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="880940072"/>
-							<reference ref="733144107"/>
 							<reference ref="450916235"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -1723,11 +1744,6 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">1056</int>
 						<reference key="object" ref="880940072"/>
-						<reference key="parent" ref="327431656"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">1057</int>
-						<reference key="object" ref="733144107"/>
 						<reference key="parent" ref="327431656"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -1822,6 +1838,11 @@
 						<reference key="object" ref="26258594"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">1379</int>
+						<reference key="object" ref="340226183"/>
+						<reference key="parent" ref="0"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -1836,7 +1857,6 @@
 				<string key="1052.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1055.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1056.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="1057.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1058.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1065.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1068.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1855,6 +1875,7 @@
 				<string key="1319.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1349.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1350.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="1379.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="371.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="371.IBWindowTemplateEditedContentRect">{{380, 496}, {480, 360}}</string>
 				<boolean value="NO" key="371.NSWindowTemplate.visibleAtLaunch"/>
@@ -1954,50 +1975,31 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1362</int>
+			<int key="maxID">1399</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">NAppDelegate</string>
 					<string key="superclassName">NSObject</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="quitApplication:">id</string>
-						<string key="refreshFeeds:">id</string>
-						<string key="showWindow:">id</string>
-						<string key="updateSetting:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="quitApplication:">
-							<string key="name">quitApplication:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="refreshFeeds:">
-							<string key="name">refreshFeeds:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="showWindow:">
-							<string key="name">showWindow:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="updateSetting:">
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">updateSetting:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">updateSetting:</string>
+						<object class="IBActionInfo" key="NS.object.0">
 							<string key="name">updateSetting:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-					</dictionary>
+					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="defaults">NSUserDefaultsController</string>
 						<string key="menu">NSMenu</string>
 						<string key="rssManager">NRSSManager</string>
 						<string key="settingsController">NSObjectController</string>
-						<string key="userDefaults">NSUserDefaultsController</string>
 						<string key="window">NSWindow</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="defaults">
-							<string key="name">defaults</string>
-							<string key="candidateClassName">NSUserDefaultsController</string>
-						</object>
 						<object class="IBToOneOutletInfo" key="menu">
 							<string key="name">menu</string>
 							<string key="candidateClassName">NSMenu</string>
@@ -2009,10 +2011,6 @@
 						<object class="IBToOneOutletInfo" key="settingsController">
 							<string key="name">settingsController</string>
 							<string key="candidateClassName">NSObjectController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="userDefaults">
-							<string key="name">userDefaults</string>
-							<string key="candidateClassName">NSUserDefaultsController</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="window">
 							<string key="name">window</string>
@@ -2030,6 +2028,7 @@
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="buttonAdd:">id</string>
 						<string key="buttonRemove:">id</string>
+						<string key="showWindow:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="buttonAdd:">
@@ -2038,6 +2037,10 @@
 						</object>
 						<object class="IBActionInfo" key="buttonRemove:">
 							<string key="name">buttonRemove:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showWindow:">
+							<string key="name">showWindow:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>
