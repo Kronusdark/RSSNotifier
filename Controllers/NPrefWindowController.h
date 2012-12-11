@@ -13,6 +13,7 @@
 // Actions
 - (IBAction)buttonAdd:(id)sender;
 - (IBAction)buttonRemove:(id)sender;
+- (IBAction)showWindow:(id)sender;
 
 // Outlets
 @property (weak) IBOutlet NSTableView *tableView;

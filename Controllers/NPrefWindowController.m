@@ -124,4 +124,8 @@
 
 }
 
+- (IBAction)showWindow:(id)sender {
+    [self.window setIsVisible:YES];
+}
+
 @end

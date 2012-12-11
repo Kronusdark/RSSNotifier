@@ -48,9 +48,6 @@
     [self.item setMenu:self.menu];
 }
 
-- (IBAction)showWindow:(id)sender {
-    [self.window setIsVisible:YES];
-}
 
 - (IBAction)quitApplication:(id)sender {
     [[NSApplication sharedApplication] terminate:self];
