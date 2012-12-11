@@ -11,6 +11,6 @@
 @protocol NNewFeedItemProtocol <NSObject>
 
 @required
-- (void)newFeedItem:(RSSFeed*)feed;
+- (void)newFeedItems:(NSArray*)items;
 
 @end
