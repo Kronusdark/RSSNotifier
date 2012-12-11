@@ -12,4 +12,6 @@
 
 @property (weak) id<NNewFeedItemProtocol> delegate;
 
+- (void)update;
+
 @end
