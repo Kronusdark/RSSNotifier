@@ -17,6 +17,7 @@
 @property (strong) IBOutlet NRSSManager *rssManager;
 @property (weak) IBOutlet NSObjectController *settingsController;
 @property (strong) NSTimer *timer;
+@property bool updateSetting;
 
 @end
 
@@ -25,6 +26,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    self.updateSetting = NO;
     [self loadInitialValues];
     [self enableStatusMenu];
     [self initTimer];
@@ -73,11 +75,17 @@
 }
 
 - (void)fire:(id)sender {
-    NSLog(@"hit");
+    if (_updateSetting) {
+        _updateSetting = NO;
+        [self initTimer];
+    } else {
+        [_rssManager update];
+    }
+
 }
 
 - (IBAction)updateSetting:(id)sender {
-    [self initTimer];
+    self.updateSetting = YES;
 }
 
 @end
