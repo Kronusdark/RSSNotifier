@@ -9,6 +9,7 @@
 #import "NAppDelegate.h"
 #import "NRSSManager.h"
 #import "NDataStorage.h"
+#import "NSString_stripHtml.h"
 
 @interface NAppDelegate ()
 
@@ -25,13 +26,15 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    // Setup
+    NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
     self.updateSetting = NO;
+    [center setDelegate:self];
     [self loadInitialValues];
     [self enableStatusMenu];
+    [self.rssManager setDelegate:self];
     [self initTimer];
 
- 
 }
 
 - (void)loadInitialValues {
@@ -56,11 +59,22 @@
 }
 
 - (void)userNotificationCenter:(NSUserNotificationCenter *)center didActivateNotification:(NSUserNotification *)notification {
+    NSURL *url = [NSURL URLWithString:[notification.userInfo valueForKey:kNKeyLink]];
+    [[NSWorkspace sharedWorkspace] openURL:url];
+    [center removeDeliveredNotification:notification];
     
 }
 
-- (void)newFeedItem:(RSSFeed *)feed {
-    NSLog(@"%@", [[feed.articles objectAtIndex:0] title]);
+- (void)newFeedItems:(NSArray *)items {
+    NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
+    for (RSSEntry *f in items) {
+        NSUserNotification *note = [[NSUserNotification alloc] init];
+        [note setTitle:[NSString stringWithFormat:@"%@ - %@",f.feedTitle, [f.title stripHtml]]];
+        [note setInformativeText:[f.summary stripHtml]];
+        [note setUserInfo:@{kNKeyLink : f.url}];
+        [center deliverNotification:note];
+    }
+
 }
 
 - (void)initTimer {
