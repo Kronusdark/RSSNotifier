@@ -87,7 +87,7 @@
         
         NRSSFeedListItem *feedToAdd = [NRSSFeedListItem new];
         [feedToAdd setTitle:_textTitle.stringValue];
-        [feedToAdd setUrl:_textFeed.stringValue];
+        [feedToAdd setUrl:testURL];
         [currentFeeds addObject:feedToAdd];
         [NDataStorage setFeedList:[NSArray arrayWithArray:currentFeeds]];
         // Reload Table

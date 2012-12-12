@@ -19,10 +19,10 @@
 }
 
 - (void)parser:(NSXMLParser*)parser foundCharacters:(NSString*)string {
-    [strings addObject:string];
+    [strings addObject:[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
 }
 - (NSString*)getCharsFound {
-    return [strings componentsJoinedByString:@""];
+    return [strings componentsJoinedByString:@" "];
 }
 @end
 
@@ -30,7 +30,8 @@
 
 - (NSString*)stripHtml {
     // take this string obj and wrap it in a root element to ensure only a single root element exists
-    NSString* string = [NSString stringWithFormat:@"<root>%@</root>", self];
+    NSString *newString = [self stringByReplacingOccurrencesOfString:@"&lt;" withString:@"<"];
+    NSString* string = [NSString stringWithFormat:@"<root>%@</root>", newString];
     
     // add the string to the xml parser
     NSStringEncoding encoding = string.fastestEncoding;

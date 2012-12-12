@@ -4,8 +4,8 @@
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
-    #import <RSSKit/RSSKit.h>
     #import "NDefs.h"
     #import "NNewFeedItemProtocol.h"
     #import <Growl/Growl.h> 
+    #import "MWFeedParser.h"
 #endif

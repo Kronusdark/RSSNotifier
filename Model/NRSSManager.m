@@ -18,43 +18,32 @@
 
 - (void)parseInQueue {
     for (NRSSFeedListItem *f in [NDataStorage getFeedList]) {
-        RSSParser *parser = [[RSSParser alloc] initWithUrl:f.url];
+        MWFeedParser *parser = [[MWFeedParser alloc] initWithFeedURL:f.url];
+        [parser setConnectionType:ConnectionTypeAsynchronously];
         [parser setDelegate:self];
+        [parser parse];
     }
 }
 
-- (void)rssParser:(RSSParser *)parser parsedFeed:(RSSFeed *)feed {
-    NSMutableArray *newArticles = [[NSMutableArray alloc] init];
+- (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {
     NSMutableArray *oldFeedList = [[NDataStorage getFeedList] mutableCopy];
-    bool foundOldItem = NO;
-
-    for (NRSSFeedListItem *item in oldFeedList) {
-        if ([parser.url isEqualToString:item.url]) {
-            while (!foundOldItem) {
-                for (RSSEntry *article in feed.articles) {
-                    if (!item.lastChecked) {
-                        item.lastChecked = [[feed.articles lastObject] valueForKey:@"date"];
-                    }
-                    if ([article.date isEqualToString:item.lastChecked]) {
-                        foundOldItem = YES;
-                        break;
-                    } else if (![article.date isEqualToString:item.lastChecked]) {
-                        [article setFeedTitle: item.title];
-                        [newArticles addObject:article];
-                    }
-                }
-                item.lastChecked = [[feed.articles objectAtIndex:0] valueForKey:@"date"];
+    for (NRSSFeedListItem *feedListItem in oldFeedList) {
+        if ([parser.url isEqualTo:feedListItem.url]) {
+            if (![feedListItem lastChecked]) {
+                feedListItem.lastChecked = [NSDate date];
+            }
+            if ([item.date isGreaterThan:[feedListItem lastChecked]]) {
+                [_delegate newFeedItems:item title:feedListItem.title];
+                feedListItem.lastChecked = [NSDate date];
             }
         }
     }
-    
-    if (newArticles.count > 0) {
-        [_delegate newFeedItems:newArticles];
-    }
-
-
     [NDataStorage setFeedList:oldFeedList];
-
-
 }
+
+- (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {
+    NSLog(@"%@", error);
+}
+
+- (void)fe
 @end

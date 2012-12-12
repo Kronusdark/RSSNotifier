@@ -9,7 +9,7 @@
 #import "NAppDelegate.h"
 #import "NRSSManager.h"
 #import "NDataStorage.h"
-#import "NSString_stripHtml.h"
+#import "NSString+HTML.h"
 
 @interface NAppDelegate ()
 
@@ -79,29 +79,27 @@
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
-- (void)newFeedItems:(NSArray *)items {
-
-    for (RSSEntry *f in items) {
+- (void)newFeedItems:(MWFeedItem *)item title:(NSString *)title {
         NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
 
         if (center) {
             // Notification Center
             NSUserNotification *note = [[NSUserNotification alloc] init];
-            [note setTitle:[NSString stringWithFormat:@"%@ - %@",f.feedTitle, [f.title stripHtml]]];
-            [note setInformativeText:[f.summary stripHtml]];
-            [note setUserInfo:@{kNKeyLink : f.url}];
+            [note setTitle:[NSString stringWithFormat:@"%@ - %@",title, [item.title stringByConvertingHTMLToPlainText]]];
+            NSLog(@"%@", [item.title stringByConvertingHTMLToPlainText]);
+            [note setInformativeText:[item.summary stringByConvertingHTMLToPlainText]];
+            [note setUserInfo:@{kNKeyLink : item.link}];
             [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:note];
         } else {
             // Growl
-            [GrowlApplicationBridge notifyWithTitle:[NSString stringWithFormat:@"%@ - %@", f.feedTitle, [f.title stripHtml]]
-                                        description:[f.summary stripHtml]
+            [GrowlApplicationBridge notifyWithTitle:[NSString stringWithFormat:@"%@ - %@", title, [item.title stringByConvertingHTMLToPlainText]]
+                                        description:[item.summary stringByConvertingHTMLToPlainText]
                                    notificationName:kNKeyGrowlNotificationName
                                            iconData:nil
                                            priority:0
                                            isSticky:NO
-                                       clickContext:@{kNKeyLink : f.url}];
+                                       clickContext:@{kNKeyLink : item.link}];
         }
-    }
 }
 
 - (void)initTimer {

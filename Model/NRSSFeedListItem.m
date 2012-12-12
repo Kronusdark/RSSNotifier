@@ -17,7 +17,6 @@
         self.savedURL = [aDecoder decodeObjectForKey:@"savedURL"];
         self.title = [aDecoder decodeObjectForKey:@"title"];
         self.latestUID = [aDecoder decodeObjectForKey:@"latestUID"];
-        self.cachedFeed = [aDecoder decodeObjectForKey:@"cachedFeed"];
     }
     return self;
 }
@@ -28,7 +27,6 @@
     [aCoder encodeObject:self.savedURL forKey:@"savedURL"];
     [aCoder encodeObject:self.title forKey:@"title"];
     [aCoder encodeObject:self.latestUID forKey:@"latestUID"];
-    [aCoder encodeObject:self.cachedFeed forKey:@"cachedFeed"];
 }
 
 @end

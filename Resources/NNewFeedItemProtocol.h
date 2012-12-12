@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MWFeedItem.h"
 
 @protocol NNewFeedItemProtocol <NSObject>
 
 @required
-- (void)newFeedItems:(NSArray*)items;
+- (void)newFeedItems:(MWFeedItem*)item title:(NSString*)title;
 
 @end

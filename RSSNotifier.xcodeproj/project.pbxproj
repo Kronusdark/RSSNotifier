@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C1A704B1677AD410004A9D5 /* RSSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAC8CA81677ACDA0032E6A7 /* RSSKit.framework */; };
-		7C1A704E1677AD640004A9D5 /* RSSKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7CAC8CA81677ACDA0032E6A7 /* RSSKit.framework */; };
+		7C217A9D167926E70084AFF2 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C217A8F167926E70084AFF2 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C217A9E167926E70084AFF2 /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C217A91167926E70084AFF2 /* MWFeedInfo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C217A9F167926E70084AFF2 /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C217A93167926E70084AFF2 /* MWFeedItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C217AA0167926E70084AFF2 /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C217A95167926E70084AFF2 /* MWFeedParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C217AA1167926E70084AFF2 /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C217A98167926E70084AFF2 /* NSDate+InternetDateTime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C217AA2167926E70084AFF2 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C217A9A167926E70084AFF2 /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C217AA3167926E70084AFF2 /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C217A9C167926E70084AFF2 /* NSString+XMLEntities.m */; };
 		7C286A4F1677920800C71EF9 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7C286A4E1677920800C71EF9 /* icon.icns */; };
 		7C286A521677967600C71EF9 /* NSString_stripHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C286A51167794B600C71EF9 /* NSString_stripHtml.m */; };
 		7C5840561668D92B00B83E08 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5840551668D92B00B83E08 /* Cocoa.framework */; };
-		7C5BE71A1678C6FA00132727 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C5BE7191678C6FA00132727 /* MainMenu.xib */; };
 		7C5CD0B6166CD83A000436BD /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CD0B5166CD83A000436BD /* defaults.plist */; };
 		7CB59AA81677BFEB00884723 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7CCCD97E1677BA4D0036DEDE /* Growl.framework */; };
 		7CCCD97F1677BA4D0036DEDE /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCCD97E1677BA4D0036DEDE /* Growl.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -29,23 +33,6 @@
 		ADD3E6C0166B09FE0032A53D /* NRSSFeedListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3E6BF166B09FE0032A53D /* NRSSFeedListItem.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		7CAC8CA71677ACDA0032E6A7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C1B9C721677AC6800401CBF /* RSSKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AD6890BA166584C100D63167;
-			remoteInfo = RSSKit;
-		};
-		7CAC8CAA1677ACE00032E6A7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C1B9C721677AC6800401CBF /* RSSKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AD6890B9166584C100D63167;
-			remoteInfo = RSSKit;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		7C1A704D1677AD5A0004A9D5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -53,7 +40,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7C1A704E1677AD640004A9D5 /* RSSKit.framework in CopyFiles */,
 				7CB59AA81677BFEB00884723 /* Growl.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,7 +47,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7C1B9C721677AC6800401CBF /* RSSKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSSKit.xcodeproj; path = ../RSSKit/RSSKit.xcodeproj; sourceTree = "<group>"; };
+		7C217A8E167926E70084AFF2 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		7C217A8F167926E70084AFF2 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		7C217A90167926E70084AFF2 /* MWFeedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedInfo.h; sourceTree = "<group>"; };
+		7C217A91167926E70084AFF2 /* MWFeedInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedInfo.m; sourceTree = "<group>"; };
+		7C217A92167926E70084AFF2 /* MWFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedItem.h; sourceTree = "<group>"; };
+		7C217A93167926E70084AFF2 /* MWFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedItem.m; sourceTree = "<group>"; };
+		7C217A94167926E70084AFF2 /* MWFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser.h; sourceTree = "<group>"; };
+		7C217A95167926E70084AFF2 /* MWFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParser.m; sourceTree = "<group>"; };
+		7C217A96167926E70084AFF2 /* MWFeedParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Private.h; sourceTree = "<group>"; };
+		7C217A97167926E70084AFF2 /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		7C217A98167926E70084AFF2 /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		7C217A99167926E70084AFF2 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		7C217A9A167926E70084AFF2 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		7C217A9B167926E70084AFF2 /* NSString+XMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLEntities.h"; sourceTree = "<group>"; };
+		7C217A9C167926E70084AFF2 /* NSString+XMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEntities.m"; sourceTree = "<group>"; };
 		7C286A4E1677920800C71EF9 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		7C286A50167794B600C71EF9 /* NSString_stripHtml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSString_stripHtml.h; sourceTree = SOURCE_ROOT; };
 		7C286A51167794B600C71EF9 /* NSString_stripHtml.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSString_stripHtml.m; sourceTree = SOURCE_ROOT; };
@@ -70,7 +70,6 @@
 		7C5840581668D92B00B83E08 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		7C5840591668D92B00B83E08 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7C58405A1668D92B00B83E08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		7C5BE7191678C6FA00132727 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		7C5CD0B5166CD83A000436BD /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
 		7CCCD97E1677BA4D0036DEDE /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		7CCCD9811677BDA70036DEDE /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Growl Registration Ticket.growlRegDict"; path = "Resources/Growl Registration Ticket.growlRegDict"; sourceTree = SOURCE_ROOT; };
@@ -100,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C1A704B1677AD410004A9D5 /* RSSKit.framework in Frameworks */,
 				7C5840561668D92B00B83E08 /* Cocoa.framework in Frameworks */,
 				7CCCD97F1677BA4D0036DEDE /* Growl.framework in Frameworks */,
 			);
@@ -109,10 +107,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C217A8D167926E70084AFF2 /* MWFeedParser */ = {
+			isa = PBXGroup;
+			children = (
+				7C4E8B931679319C00E12926 /* Categories */,
+				7C217A90167926E70084AFF2 /* MWFeedInfo.h */,
+				7C217A91167926E70084AFF2 /* MWFeedInfo.m */,
+				7C217A92167926E70084AFF2 /* MWFeedItem.h */,
+				7C217A93167926E70084AFF2 /* MWFeedItem.m */,
+				7C217A94167926E70084AFF2 /* MWFeedParser.h */,
+				7C217A95167926E70084AFF2 /* MWFeedParser.m */,
+				7C217A96167926E70084AFF2 /* MWFeedParser_Private.h */,
+			);
+			path = MWFeedParser;
+			sourceTree = SOURCE_ROOT;
+		};
+		7C4E8B931679319C00E12926 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7C217A8E167926E70084AFF2 /* GTMNSString+HTML.h */,
+				7C217A8F167926E70084AFF2 /* GTMNSString+HTML.m */,
+				7C217A97167926E70084AFF2 /* NSDate+InternetDateTime.h */,
+				7C217A98167926E70084AFF2 /* NSDate+InternetDateTime.m */,
+				7C217A99167926E70084AFF2 /* NSString+HTML.h */,
+				7C217A9A167926E70084AFF2 /* NSString+HTML.m */,
+				7C217A9B167926E70084AFF2 /* NSString+XMLEntities.h */,
+				7C217A9C167926E70084AFF2 /* NSString+XMLEntities.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		7C5840461668D92B00B83E08 = {
 			isa = PBXGroup;
 			children = (
-				7C5BE7191678C6FA00132727 /* MainMenu.xib */,
 				7C286A4E1677920800C71EF9 /* icon.icns */,
 				7C58405B1668D92B00B83E08 /* RSSNotifier */,
 				7C5840541668D92B00B83E08 /* Frameworks */,
@@ -140,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				7CCCD97E1677BA4D0036DEDE /* Growl.framework */,
-				7C1B9C721677AC6800401CBF /* RSSKit.xcodeproj */,
 				7C5840551668D92B00B83E08 /* Cocoa.framework */,
 				7C5840581668D92B00B83E08 /* AppKit.framework */,
 				7C5840591668D92B00B83E08 /* CoreData.framework */,
@@ -152,6 +178,7 @@
 		7C58405B1668D92B00B83E08 /* RSSNotifier */ = {
 			isa = PBXGroup;
 			children = (
+				7C217A8D167926E70084AFF2 /* MWFeedParser */,
 				AD6E0A5E1669B7F9008D6A29 /* Resources */,
 				7C58412616693BEE00B83E08 /* Controller */,
 				7C58412216693BC100B83E08 /* View */,
@@ -208,14 +235,6 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		7CAC8CA41677ACDA0032E6A7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7CAC8CA81677ACDA0032E6A7 /* RSSKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		AD6E0A5E1669B7F9008D6A29 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,7 +261,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7CAC8CAB1677ACE00032E6A7 /* PBXTargetDependency */,
 			);
 			name = RSSNotifier;
 			productName = RSSNotifier;
@@ -269,28 +287,12 @@
 			mainGroup = 7C5840461668D92B00B83E08;
 			productRefGroup = 7C5840521668D92B00B83E08 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 7CAC8CA41677ACDA0032E6A7 /* Products */;
-					ProjectRef = 7C1B9C721677AC6800401CBF /* RSSKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				7C5840501668D92B00B83E08 /* RSSNotifier */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		7CAC8CA81677ACDA0032E6A7 /* RSSKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RSSKit.framework;
-			remoteRef = 7CAC8CA71677ACDA0032E6A7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7C58404F1668D92B00B83E08 /* Resources */ = {
@@ -304,7 +306,6 @@
 				7C5CD0B6166CD83A000436BD /* defaults.plist in Resources */,
 				7C286A4F1677920800C71EF9 /* icon.icns in Resources */,
 				7CCCD9821677BDA80036DEDE /* Growl Registration Ticket.growlRegDict in Resources */,
-				7C5BE71A1678C6FA00132727 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,18 +323,17 @@
 				AD6E0A581669A54A008D6A29 /* NAppDelegate.m in Sources */,
 				ADD3E6C0166B09FE0032A53D /* NRSSFeedListItem.m in Sources */,
 				7C286A521677967600C71EF9 /* NSString_stripHtml.m in Sources */,
+				7C217A9D167926E70084AFF2 /* GTMNSString+HTML.m in Sources */,
+				7C217A9E167926E70084AFF2 /* MWFeedInfo.m in Sources */,
+				7C217A9F167926E70084AFF2 /* MWFeedItem.m in Sources */,
+				7C217AA0167926E70084AFF2 /* MWFeedParser.m in Sources */,
+				7C217AA1167926E70084AFF2 /* NSDate+InternetDateTime.m in Sources */,
+				7C217AA2167926E70084AFF2 /* NSString+HTML.m in Sources */,
+				7C217AA3167926E70084AFF2 /* NSString+XMLEntities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7CAC8CAB1677ACE00032E6A7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RSSKit;
-			targetProxy = 7CAC8CAA1677ACE00032E6A7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AD6E0A481669A4C2008D6A29 /* Credits.rtf */ = {
