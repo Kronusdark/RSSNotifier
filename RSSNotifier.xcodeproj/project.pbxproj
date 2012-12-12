@@ -12,6 +12,7 @@
 		7C286A4F1677920800C71EF9 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7C286A4E1677920800C71EF9 /* icon.icns */; };
 		7C286A521677967600C71EF9 /* NSString_stripHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C286A51167794B600C71EF9 /* NSString_stripHtml.m */; };
 		7C5840561668D92B00B83E08 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5840551668D92B00B83E08 /* Cocoa.framework */; };
+		7C5BE71A1678C6FA00132727 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C5BE7191678C6FA00132727 /* MainMenu.xib */; };
 		7C5CD0B6166CD83A000436BD /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CD0B5166CD83A000436BD /* defaults.plist */; };
 		7CB59AA81677BFEB00884723 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7CCCD97E1677BA4D0036DEDE /* Growl.framework */; };
 		7CCCD97F1677BA4D0036DEDE /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCCD97E1677BA4D0036DEDE /* Growl.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -69,6 +70,7 @@
 		7C5840581668D92B00B83E08 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		7C5840591668D92B00B83E08 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7C58405A1668D92B00B83E08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7C5BE7191678C6FA00132727 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		7C5CD0B5166CD83A000436BD /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
 		7CCCD97E1677BA4D0036DEDE /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		7CCCD9811677BDA70036DEDE /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Growl Registration Ticket.growlRegDict"; path = "Resources/Growl Registration Ticket.growlRegDict"; sourceTree = SOURCE_ROOT; };
@@ -110,6 +112,7 @@
 		7C5840461668D92B00B83E08 = {
 			isa = PBXGroup;
 			children = (
+				7C5BE7191678C6FA00132727 /* MainMenu.xib */,
 				7C286A4E1677920800C71EF9 /* icon.icns */,
 				7C58405B1668D92B00B83E08 /* RSSNotifier */,
 				7C5840541668D92B00B83E08 /* Frameworks */,
@@ -301,6 +304,7 @@
 				7C5CD0B6166CD83A000436BD /* defaults.plist in Resources */,
 				7C286A4F1677920800C71EF9 /* icon.icns in Resources */,
 				7CCCD9821677BDA80036DEDE /* Growl Registration Ticket.growlRegDict in Resources */,
+				7C5BE71A1678C6FA00132727 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
