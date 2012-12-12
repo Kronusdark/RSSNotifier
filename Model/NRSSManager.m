@@ -20,7 +20,6 @@
     for (NRSSFeedListItem *f in [NDataStorage getFeedList]) {
         RSSParser *parser = [[RSSParser alloc] initWithUrl:f.url];
         [parser setDelegate:self];
-        [parser parse];
     }
 }
 
