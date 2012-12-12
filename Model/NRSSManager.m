@@ -44,6 +44,4 @@
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {
     NSLog(@"%@", error);
 }
-
-- (void)fe
 @end
