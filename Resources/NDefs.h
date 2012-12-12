@@ -13,3 +13,4 @@
 #define kNKeyFeeds @"feeds"
 #define kNKeyLink @"link"
 #define kNKeyFeedList @"feedList"
+#define kNKeyGrowlNotificationName @"RSSFeed"

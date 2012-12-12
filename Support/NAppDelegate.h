@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate, NNewFeedItemProtocol>
+@interface NAppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate, NNewFeedItemProtocol, GrowlApplicationBridgeDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 

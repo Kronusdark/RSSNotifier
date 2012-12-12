@@ -13,7 +13,9 @@
 		7C286A521677967600C71EF9 /* NSString_stripHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C286A51167794B600C71EF9 /* NSString_stripHtml.m */; };
 		7C5840561668D92B00B83E08 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5840551668D92B00B83E08 /* Cocoa.framework */; };
 		7C5CD0B6166CD83A000436BD /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CD0B5166CD83A000436BD /* defaults.plist */; };
-		7CCCD97F1677BA4D0036DEDE /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCCD97E1677BA4D0036DEDE /* Growl.framework */; };
+		7CB59AA81677BFEB00884723 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7CCCD97E1677BA4D0036DEDE /* Growl.framework */; };
+		7CCCD97F1677BA4D0036DEDE /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCCD97E1677BA4D0036DEDE /* Growl.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		7CCCD9821677BDA80036DEDE /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 7CCCD9811677BDA70036DEDE /* Growl Registration Ticket.growlRegDict */; };
 		AD6E0A411669A477008D6A29 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD6E0A401669A477008D6A29 /* MainMenu.xib */; };
 		AD6E0A4C1669A4C2008D6A29 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AD6E0A481669A4C2008D6A29 /* Credits.rtf */; };
 		AD6E0A4D1669A4C2008D6A29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD6E0A4A1669A4C2008D6A29 /* InfoPlist.strings */; };
@@ -46,11 +48,12 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		7C1A704D1677AD5A0004A9D5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
 				7C1A704E1677AD640004A9D5 /* RSSKit.framework in CopyFiles */,
+				7CB59AA81677BFEB00884723 /* Growl.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +71,7 @@
 		7C58405A1668D92B00B83E08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7C5CD0B5166CD83A000436BD /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
 		7CCCD97E1677BA4D0036DEDE /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
+		7CCCD9811677BDA70036DEDE /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Growl Registration Ticket.growlRegDict"; path = "Resources/Growl Registration Ticket.growlRegDict"; sourceTree = SOURCE_ROOT; };
 		AD6E0A401669A477008D6A29 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = View/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		AD6E0A431669A4A3008D6A29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Support/main.m; sourceTree = SOURCE_ROOT; };
 		AD6E0A441669A4A3008D6A29 /* NAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NAppDelegate.h; path = Support/NAppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -166,6 +170,7 @@
 				AD6E0A471669A4A3008D6A29 /* RSSNotifier-Prefix.pch */,
 				AD6E0A481669A4C2008D6A29 /* Credits.rtf */,
 				AD6E0A4A1669A4C2008D6A29 /* InfoPlist.strings */,
+				7CCCD9811677BDA70036DEDE /* Growl Registration Ticket.growlRegDict */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				AD6E0A601669B7F9008D6A29 /* icon.png in Resources */,
 				7C5CD0B6166CD83A000436BD /* defaults.plist in Resources */,
 				7C286A4F1677920800C71EF9 /* icon.icns in Resources */,
+				7CCCD9821677BDA80036DEDE /* Growl Registration Ticket.growlRegDict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +354,7 @@
 		7C58406D1668D92C00B83E08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ADDITIONAL_SDKS = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -369,7 +376,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -378,6 +385,7 @@
 		7C58406E1668D92C00B83E08 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ADDITIONAL_SDKS = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -393,7 +401,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -410,7 +418,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Support/RSSNotifier-Prefix.pch";
 				INFOPLIST_FILE = "Support/RSSNotifier-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -427,7 +437,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Support/RSSNotifier-Prefix.pch";
 				INFOPLIST_FILE = "Support/RSSNotifier-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

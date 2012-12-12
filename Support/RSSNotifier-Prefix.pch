@@ -7,4 +7,5 @@
     #import <RSSKit/RSSKit.h>
     #import "NDefs.h"
     #import "NNewFeedItemProtocol.h"
+    #import <Growl/Growl.h> 
 #endif

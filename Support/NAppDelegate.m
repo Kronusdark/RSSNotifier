@@ -27,9 +27,18 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Setup
+
+    // Mountain Lion Notification Center
     NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
+    if (center) {
+        [center setDelegate:self];
+    } else {
+        // Growl
+        [GrowlApplicationBridge setGrowlDelegate:self];
+    }
+
+    // Other Setup
     self.updateSetting = NO;
-    [center setDelegate:self];
     [self loadInitialValues];
     [self enableStatusMenu];
     [self.rssManager setDelegate:self];
@@ -62,19 +71,37 @@
     NSURL *url = [NSURL URLWithString:[notification.userInfo valueForKey:kNKeyLink]];
     [[NSWorkspace sharedWorkspace] openURL:url];
     [center removeDeliveredNotification:notification];
-    
+}
+
+
+- (void)growlNotificationWasClicked:(id)clickContext {
+    NSURL *url = [NSURL URLWithString:[clickContext valueForKey:kNKeyLink]];
+    [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 - (void)newFeedItems:(NSArray *)items {
-    NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
-    for (RSSEntry *f in items) {
-        NSUserNotification *note = [[NSUserNotification alloc] init];
-        [note setTitle:[NSString stringWithFormat:@"%@ - %@",f.feedTitle, [f.title stripHtml]]];
-        [note setInformativeText:[f.summary stripHtml]];
-        [note setUserInfo:@{kNKeyLink : f.url}];
-        [center deliverNotification:note];
-    }
 
+    for (RSSEntry *f in items) {
+        NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
+
+        if (center) {
+            // Notification Center
+            NSUserNotification *note = [[NSUserNotification alloc] init];
+            [note setTitle:[NSString stringWithFormat:@"%@ - %@",f.feedTitle, [f.title stripHtml]]];
+            [note setInformativeText:[f.summary stripHtml]];
+            [note setUserInfo:@{kNKeyLink : f.url}];
+            [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:note];
+        } else {
+            // Growl
+            [GrowlApplicationBridge notifyWithTitle:[NSString stringWithFormat:@"%@ - %@", f.feedTitle, [f.title stripHtml]]
+                                        description:[f.summary stripHtml]
+                                   notificationName:kNKeyGrowlNotificationName
+                                           iconData:nil
+                                           priority:0
+                                           isSticky:NO
+                                       clickContext:@{kNKeyLink : f.url}];
+        }
+    }
 }
 
 - (void)initTimer {
