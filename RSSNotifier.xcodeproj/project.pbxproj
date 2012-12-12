@@ -15,7 +15,6 @@
 		7C217AA2167926E70084AFF2 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C217A9A167926E70084AFF2 /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7C217AA3167926E70084AFF2 /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C217A9C167926E70084AFF2 /* NSString+XMLEntities.m */; };
 		7C286A4F1677920800C71EF9 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7C286A4E1677920800C71EF9 /* icon.icns */; };
-		7C286A521677967600C71EF9 /* NSString_stripHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C286A51167794B600C71EF9 /* NSString_stripHtml.m */; };
 		7C5840561668D92B00B83E08 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5840551668D92B00B83E08 /* Cocoa.framework */; };
 		7C5CD0B6166CD83A000436BD /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CD0B5166CD83A000436BD /* defaults.plist */; };
 		7CB59AA81677BFEB00884723 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7CCCD97E1677BA4D0036DEDE /* Growl.framework */; };
@@ -63,8 +62,6 @@
 		7C217A9B167926E70084AFF2 /* NSString+XMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLEntities.h"; sourceTree = "<group>"; };
 		7C217A9C167926E70084AFF2 /* NSString+XMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEntities.m"; sourceTree = "<group>"; };
 		7C286A4E1677920800C71EF9 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
-		7C286A50167794B600C71EF9 /* NSString_stripHtml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSString_stripHtml.h; sourceTree = SOURCE_ROOT; };
-		7C286A51167794B600C71EF9 /* NSString_stripHtml.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSString_stripHtml.m; sourceTree = SOURCE_ROOT; };
 		7C5840511668D92B00B83E08 /* RSSNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5840551668D92B00B83E08 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7C5840581668D92B00B83E08 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -191,8 +188,6 @@
 		7C58405C1668D92B00B83E08 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				7C286A50167794B600C71EF9 /* NSString_stripHtml.h */,
-				7C286A51167794B600C71EF9 /* NSString_stripHtml.m */,
 				AD6E0A431669A4A3008D6A29 /* main.m */,
 				AD6E0A441669A4A3008D6A29 /* NAppDelegate.h */,
 				AD6E0A451669A4A3008D6A29 /* NAppDelegate.m */,
@@ -322,7 +317,6 @@
 				AD6E0A571669A54A008D6A29 /* main.m in Sources */,
 				AD6E0A581669A54A008D6A29 /* NAppDelegate.m in Sources */,
 				ADD3E6C0166B09FE0032A53D /* NRSSFeedListItem.m in Sources */,
-				7C286A521677967600C71EF9 /* NSString_stripHtml.m in Sources */,
 				7C217A9D167926E70084AFF2 /* GTMNSString+HTML.m in Sources */,
 				7C217A9E167926E70084AFF2 /* MWFeedInfo.m in Sources */,
 				7C217A9F167926E70084AFF2 /* MWFeedItem.m in Sources */,
