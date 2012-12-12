@@ -126,6 +126,8 @@
 
 - (IBAction)showWindow:(id)sender {
     [self.window setIsVisible:YES];
+    [self.window makeKeyWindow];
+    [self.window orderFrontRegardless];
 }
 
 @end
